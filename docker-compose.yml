@@ -1,0 +1,26 @@
+services:
+  backend:
+    build: ./backend
+    container_name: url-backend
+    restart: always
+    env_file: ./backend/.env
+    volumes:
+      - ./backend/db:/app/db
+    ports:
+      - "8000:8000"
+    networks:
+      url-net:
+
+  frontend:
+    build: ./frontend
+    container_name: url-frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    networks:
+      url-net:
+    depends_on:
+      - backend
+
+networks:
+  url-net:

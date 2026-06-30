@@ -9,6 +9,7 @@ node_modules/
 .next/
 out/
 dist/
+frontend/.git-local-backup/
 
 # Environment and local secrets
 .env
@@ -20,6 +21,13 @@ dist/
 *.sqlite
 *.sqlite3
 backend/db/sqlite/
+/test.js
+/test.ts
+
+# Local assistant/template notes
+frontend/AGENTS.md
+frontend/CLAUDE.md
+frontend/README.md
 
 # Logs
 *.log
@@ -31,4 +39,3 @@ yarn-error.log*
 .DS_Store
 .idea/
 .vscode/
-
